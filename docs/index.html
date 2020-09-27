@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | {{{ PRODUCT_NAME }}}</title>
-</head>
-
-<body style="text-align: center">
-    <canvas id="unity-canvas"
-        style="width: {{{ WIDTH }}}px; height: {{{ HEIGHT }}}px; background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}}"></canvas>
-    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+    <title>Unity WebGL Player | Spending3_dev</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/docs.loader.js"></script>
     <script>
-        createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "Build/{{{ DATA_FILENAME }}}",
-            frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
-            codeUrl: "Build/{{{ CODE_FILENAME }}}",
-            #if MEMORY_FILENAME
-        memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
-            #endif
-#if SYMBOLS_FILENAME
-        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
-            #endif
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/docs.data.br",
+        frameworkUrl: "Build/docs.framework.js.br",
+        codeUrl: "Build/docs.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-            companyName: "{{{ COMPANY_NAME }}}",
-            productName: "{{{ PRODUCT_NAME }}}",
-            productVersion: "{{{ PRODUCT_VERSION }}}",
-        });
-        unityInstance.SetFullscreen(1);
+        companyName: "DefaultCompany",
+        productName: "Spending3_dev",
+        productVersion: "1.0",
+      });
     </script>
-</body>
-
+  </body>
 </html>
