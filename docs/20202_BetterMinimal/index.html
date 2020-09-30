@@ -42,13 +42,13 @@
 
 <body>
 	<div id="gameContainer">
-		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-		<script src="Build/docs.loader.js"></script>
+		<canvas id="unity-canvas" data-pixel-art="true"></canvas>
+		<script src="Build/20202_BetterMinimal.loader.js"></script>
 		<script>
 			createUnityInstance(document.querySelector("#unity-canvas"), {
-				dataUrl: "Build/docs.data",
-				frameworkUrl: "Build/docs.framework.js",
-				codeUrl: "Build/docs.wasm",
+				dataUrl: "Build/20202_BetterMinimal.data",
+				frameworkUrl: "Build/20202_BetterMinimal.framework.js",
+				codeUrl: "Build/20202_BetterMinimal.wasm",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "DefaultCompany",
 				productName: "Spending3_dev",
@@ -83,7 +83,7 @@
 
 				var scaleToFit;
 				try {
-					scaleToFit = !!JSON.parse("");
+					scaleToFit = !!JSON.parse("true");
 				} catch (e) {
 					scaleToFit = true;
 				}

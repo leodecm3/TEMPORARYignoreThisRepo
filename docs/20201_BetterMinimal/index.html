@@ -23,6 +23,15 @@
 
 		div#gameContainer canvas {
 			position: absolute;
+			image-rendering: optimizeSpeed;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			image-rendering: crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: optimize-contrast;
+			image-rendering: pixelated;
+			-ms-interpolation-mode: nearest-neighbor;
 		}
 	</style>
 </head>
@@ -30,12 +39,12 @@
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas"></canvas>
-		<script src="Build/docs.loader.js"></script>
+		<script src="Build/20201_BetterMinimal.loader.js"></script>
 		<script>
 			createUnityInstance(document.querySelector("#unity-canvas"), {
-				dataUrl: "Build/docs.data",
-				frameworkUrl: "Build/docs.framework.js",
-				codeUrl: "Build/docs.wasm",
+				dataUrl: "Build/20201_BetterMinimal.data",
+				frameworkUrl: "Build/20201_BetterMinimal.framework.js",
+				codeUrl: "Build/20201_BetterMinimal.wasm",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "DefaultCompany",
 				productName: "Spending3_dev",
@@ -70,7 +79,7 @@
 
 				var scaleToFit;
 				try {
-					scaleToFit = !!JSON.parse("");
+					scaleToFit = !!JSON.parse("true");
 				} catch (e) {
 					scaleToFit = true;
 				}
